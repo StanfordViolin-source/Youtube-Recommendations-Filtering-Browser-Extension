@@ -1,0 +1,101 @@
+/*
+  options.css
+  Friendly, readable layout for the options page.
+*/
+
+:root {
+  color-scheme: light;
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f2ed;
+  color: #1b1b1b;
+}
+
+.page {
+  max-width: 860px;
+  margin: 20px auto 40px;
+  padding: 0 16px;
+}
+
+header h1 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+}
+
+header p {
+  margin: 0 0 20px 0;
+  color: #555;
+}
+
+.section {
+  margin: 18px 0;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e2ddd2;
+}
+
+.section h2 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+
+.hint {
+  margin: 6px 0 10px 0;
+  color: #666;
+  font-size: 12px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #d2ccc0;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 13px;
+  font-family: "Courier New", monospace;
+  box-sizing: border-box;
+  background: #faf9f6;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.label {
+  min-width: 200px;
+  font-size: 13px;
+}
+
+input[type="number"] {
+  width: 100px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid #d2ccc0;
+  background: #faf9f6;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  border: 1px solid #c9c1b2;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f0ede6;
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Filter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1>Music-Only Filter</h1>
+      <p class="help">
+        This popup lets you quickly turn the filter on/off for blocked items.
+      </p>
+
+      <section class="section">
+        <label class="row">
+          <input id="showBlocked" type="checkbox" />
+          <span>Show blocked items (temporary)</span>
+        </label>
+      </section>
+
+      <section class="section">
+        <label class="row">
+          <input id="debugMode" type="checkbox" />
+          <span>Enable debug mode (badge + logs)</span>
+        </label>
+      </section>
+
+      <section class="section">
+        <div class="label">Default policy when unsure</div>
+        <label class="row">
+          <input id="policyShow" name="policy" type="radio" value="show" />
+          <span>Conservative: show (do not hide)</span>
+        </label>
+        <label class="row">
+          <input id="policyHide" name="policy" type="radio" value="hide" />
+          <span>Aggressive: hide (block unless music)</span>
+        </label>
+      </section>
+
+      <section class="section buttons">
+        <button id="rescan" type="button">Rescan this page</button>
+        <button id="openOptions" type="button">Edit keyword lists</button>
+      </section>
+    </main>
+
+    <script src="../src/defaults.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

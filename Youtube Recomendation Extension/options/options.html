@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Music Filter Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>YouTube Music-Only Filter</h1>
+        <p>
+          This page controls the keyword lists used to decide if a recommendation
+          is music or not. Each line is one keyword or phrase.
+        </p>
+      </header>
+
+      <section class="section">
+        <h2>Strong Music Keywords</h2>
+        <p class="hint">
+          If any of these appear in the title or channel name, the item is treated as music.
+        </p>
+        <textarea id="strongList" rows="6"></textarea>
+      </section>
+
+      <section class="section">
+        <h2>Moderate Music Keywords</h2>
+        <p class="hint">
+          These are weaker signals. They count as music unless the duration is extremely short or long.
+        </p>
+        <textarea id="moderateList" rows="6"></textarea>
+      </section>
+
+      <section class="section">
+        <h2>Non-Music Keywords</h2>
+        <p class="hint">
+          If any of these appear in the title or channel name, the item is blocked immediately.
+        </p>
+        <textarea id="nonMusicList" rows="6"></textarea>
+      </section>
+
+      <section class="section">
+        <h2>Channel Music Tokens</h2>
+        <p class="hint">
+          If the channel name contains one of these AND the duration is in the typical music range,
+          it is treated as music.
+        </p>
+        <textarea id="channelTokens" rows="5"></textarea>
+      </section>
+
+      <section class="section">
+        <h2>Default Policy When Unsure</h2>
+        <label class="row">
+          <input id="defaultShow" type="radio" name="defaultPolicy" value="show" />
+          <span>Conservative: show (do not hide) when unsure</span>
+        </label>
+        <label class="row">
+          <input id="defaultHide" type="radio" name="defaultPolicy" value="hide" />
+          <span>Aggressive: hide when unsure</span>
+        </label>
+      </section>
+
+      <section class="section">
+        <label class="row">
+          <input id="showBlocked" type="checkbox" />
+          <span>Show blocked items (for review)</span>
+        </label>
+      </section>
+
+      <section class="section">
+        <label class="row">
+          <input id="debugMode" type="checkbox" />
+          <span>Enable debug mode (badge + console logs)</span>
+        </label>
+      </section>
+
+      <section class="section">
+        <label class="row">
+          <span class="label">Debounce (milliseconds)</span>
+          <input id="debounceMs" type="number" min="20" max="200" step="5" />
+        </label>
+        <p class="hint">Lower values scan faster; higher values reduce CPU usage.</p>
+      </section>
+
+      <section class="buttons">
+        <button id="save" type="button">Save Settings</button>
+        <button id="reset" type="button">Reset to Defaults</button>
+      </section>
+    </main>
+
+    <script src="../src/defaults.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
